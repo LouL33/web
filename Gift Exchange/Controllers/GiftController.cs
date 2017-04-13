@@ -16,5 +16,30 @@ namespace Gift_Exchange.Controllers
             //pass into veiw
             return View(gifts);
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+
+            var Contents = collection["Contents"];
+            var GiftHint = collection["GiftHint"];
+            var ColorWrappingPaper = collection["ColorWrappingPaper"];
+            var Height = collection["Height"];
+            var Width = collection["Width"];
+            var Depth = collection["Depth"];
+            var Weight = collection["Weight"];
+            var IsOpen = collection["IsOpen"];
+            return RedirectToAction("Index");
+
+
+
+        }
+
     }
 }

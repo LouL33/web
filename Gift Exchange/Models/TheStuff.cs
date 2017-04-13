@@ -33,5 +33,7 @@ namespace Gift_Exchange.Models
             IsOpened = reader["IsOpened"] as bool?;
 
         }
+
+
     }
 }
